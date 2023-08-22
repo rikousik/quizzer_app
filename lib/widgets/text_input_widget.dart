@@ -3,10 +3,19 @@ import 'package:flutter/material.dart';
 import '../styles/box.dart';
 
 class TextInputWidget extends StatefulWidget {
-  const TextInputWidget({required this.hintText, this.icon, super.key});
+  const TextInputWidget(
+      {required this.hintText,
+      this.icon,
+      super.key,
+      this.controller,
+      this.minLines,
+      this.maxLines});
 
   final String hintText;
   final String? icon;
+  final int? minLines;
+  final int? maxLines;
+  final TextEditingController? controller;
 
   @override
   State<TextInputWidget> createState() => _TextInputWidgetState();
@@ -26,9 +35,26 @@ class _TextInputWidgetState extends State<TextInputWidget> {
           const Color.fromRGBO(220, 228, 248, 1),
           10),
       child: TextField(
+        maxLines: widget.maxLines,
+        minLines: widget.minLines,
+        controller: widget.controller,
         textCapitalization: TextCapitalization.words,
         textInputAction: TextInputAction.next,
+        maxLength: 400,
         decoration: InputDecoration(
+          counter: Column(
+            crossAxisAlignment: CrossAxisAlignment.end,
+            children: [
+              const Divider(
+                color: Colors.white,
+              ),
+              Padding(
+                padding: const EdgeInsets.symmetric(vertical: 4),
+                child: Text(
+                    "${(widget.controller?.text.length ?? 0).toString()}/400"),
+              )
+            ],
+          ),
           prefixIcon:
               widget.icon != null ? Image.asset(widget.icon ?? '') : null,
           border: InputBorder.none,

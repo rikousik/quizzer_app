@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ui_demo/screens/feedback_screen.dart';
 
 class HomeInviteFriend extends StatelessWidget {
   const HomeInviteFriend({Key? key}) : super(key: key);
@@ -47,21 +48,30 @@ class HomeInviteFriend extends StatelessWidget {
                   ),
                   const SizedBox(height: 20), // Adjust spacing as needed
 
-                  Container(
-                    width: 107,
-                    height: 34,
-                    decoration: BoxDecoration(
-                      color: const Color.fromRGBO(230, 231, 253, 1),
-                      borderRadius: BorderRadius.circular(20),
-                    ),
-                    child: const Center(
-                      child: Text(
-                        'Invite Friend',
-                        style: TextStyle(
-                          color: Color.fromRGBO(59, 79, 125, 1),
-                          fontFamily: "SF Pro Display",
-                          fontSize: 14,
-                          fontWeight: FontWeight.w500,
+                  InkWell(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const FeedBackScreen()),
+                      );
+                    },
+                    child: Container(
+                      width: 107,
+                      height: 34,
+                      decoration: BoxDecoration(
+                        color: const Color.fromRGBO(230, 231, 253, 1),
+                        borderRadius: BorderRadius.circular(20),
+                      ),
+                      child: const Center(
+                        child: Text(
+                          'Invite Friend',
+                          style: TextStyle(
+                            color: Color.fromRGBO(59, 79, 125, 1),
+                            fontFamily: "SF Pro Display",
+                            fontSize: 14,
+                            fontWeight: FontWeight.w500,
+                          ),
                         ),
                       ),
                     ),

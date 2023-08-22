@@ -21,9 +21,9 @@ class SubmitButton extends StatelessWidget {
           padding: const EdgeInsets.all(2),
           child: SizedBox(
             height: 44,
-            width: 136,
+            // width: 136,
             child: Container(
-              padding: const EdgeInsets.symmetric(vertical: 5),
+              padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 20),
               decoration: BoxDecoration(
                 color: fillColor ?? const Color.fromRGBO(81, 99, 224, 1),
                 borderRadius: BorderRadius.circular(10),
