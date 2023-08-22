@@ -1,0 +1,37 @@
+class Strings {
+  static const NAME = "Name";
+  static const LAST_NAME = "Last Name";
+  static const MOBILE_NUMBER = "Mobile Number";
+  static const AGE = "Age";
+  static const SEND_OTP = "Send OTP";
+  static const VERIFY = "Verify";
+  static const NETWORK = "Network";
+  static const NO_NETWORK = "No Network";
+  static const LOG_IN = "Log In";
+  static const SIGN_UP = "Sign Up";
+  static const HOME = "Home";
+  static const NEW_GAME = "New Game";
+  static const CHOOSE_PLAYERS = "Choose Players";
+  static const SELECT_GAMES = "Select Games";
+  static const UNFINISHED_GAMES = "Unfinished Games";
+  static const VIEW_ALL = "View all";
+  static const STATISTICS = "Statistics";
+  static const INFO = "Info";
+  static const GAMES = "Games";
+  static const NOTIFICATION = "Notification";
+  static const PROFILE = "Profile";
+  static const ADD = "ADD";
+  static const RESUME = "Resume";
+  static const NEXT = "Next";
+  static const FEEDBACK = "Feedback";
+  static const DISMISS = "Dismiss";
+  static const SEND_FEEDBACK = "Send Feedback";
+  static const INVITE = "Invite";
+  static const INVITED = "Invited";
+  static const INVITE_FRIEND = "Invite Friend";
+  static const ABOUT_US = "About Us";
+  static const PLEASE_ENTER_GAME_TITLE = "Please Enter Game Title";
+  static const TYPE_OF_GAME = "Type of Game";
+  static const ENTER_PLAYER_NAME = "Enter Player Name";
+  static const SEARCH_NAME = "Search Name";
+}
