@@ -19,26 +19,25 @@ class _CustomNavigationBarState extends State<CustomNavigationBar> {
         fit: BoxFit.fill,
       ),
     );
-    return Container(
-        child: Column(
+    return Column(
       children: [
         // Image(
         //   image: AssetImage("assets/images/menu_backgroun.png"),
         //   fit: BoxFit.cover,
         // ),
-        SizedBox(
+        const SizedBox(
           height: 10,
         ),
         Stack(
           children: [
             Padding(
-              padding: EdgeInsets.only(top: 1, bottom: 0),
+              padding: const EdgeInsets.only(top: 1, bottom: 0),
               child: Container(
                 alignment: Alignment.center,
                 child: Container(
                   width: 70,
                   height: 70,
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                     shape: BoxShape.circle,
                     color: Color.fromARGB(255, 107, 122,
                         231), // Replace with your desired circle color
@@ -49,7 +48,7 @@ class _CustomNavigationBarState extends State<CustomNavigationBar> {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => NewGameScreen(),
+                            builder: (context) => const NewGameScreen(),
                           ));
                     },
                   ),
@@ -57,7 +56,7 @@ class _CustomNavigationBarState extends State<CustomNavigationBar> {
               ),
             ),
             Padding(
-              padding: EdgeInsets.only(top: 30),
+              padding: const EdgeInsets.only(top: 30),
               child: Container(
                 decoration: kBgfooterScreen,
                 height: 80,
@@ -66,12 +65,12 @@ class _CustomNavigationBarState extends State<CustomNavigationBar> {
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
                   children: <Widget>[
-                    SizedBox(
+                    const SizedBox(
                       height: 10,
                     ),
                     Row(
                       children: [
-                        Container(
+                        SizedBox(
                           width: MediaQuery.of(context).size.width / 5,
                           child: TextButton(
                             onPressed: () {
@@ -80,8 +79,8 @@ class _CustomNavigationBarState extends State<CustomNavigationBar> {
                             child: Column(
                               children: [
                                 Image.asset("assets/images/statistics.png"),
-                                SizedBox(height: 16),
-                                Text(
+                                const SizedBox(height: 16),
+                                const Text(
                                   "Statistics",
                                   style: TextStyle(
                                       fontSize: 10.5, color: Colors.white),
@@ -90,7 +89,7 @@ class _CustomNavigationBarState extends State<CustomNavigationBar> {
                             ),
                           ),
                         ),
-                        Container(
+                        SizedBox(
                           width: MediaQuery.of(context).size.width / 5,
                           child: TextButton(
                             onPressed: () {
@@ -99,8 +98,8 @@ class _CustomNavigationBarState extends State<CustomNavigationBar> {
                             child: Column(
                               children: [
                                 Image.asset("assets/images/info.png"),
-                                SizedBox(height: 16),
-                                Text(
+                                const SizedBox(height: 16),
+                                const Text(
                                   "Info",
                                   style: TextStyle(
                                       fontSize: 10.5, color: Colors.white),
@@ -109,17 +108,17 @@ class _CustomNavigationBarState extends State<CustomNavigationBar> {
                             ),
                           ),
                         ),
-                        Container(
+                        SizedBox(
                           width: MediaQuery.of(context).size.width / 5,
                           child: TextButton(
                             onPressed: () {
                               Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                    builder: (context) => NewGameScreen(),
+                                    builder: (context) => const NewGameScreen(),
                                   ));
                             },
-                            child: Column(
+                            child: const Column(
                               children: [
                                 SizedBox(height: 40),
                                 Text(
@@ -131,7 +130,7 @@ class _CustomNavigationBarState extends State<CustomNavigationBar> {
                             ),
                           ),
                         ),
-                        Container(
+                        SizedBox(
                           width: MediaQuery.of(context).size.width / 5,
                           child: TextButton(
                             onPressed: () {},
@@ -143,12 +142,12 @@ class _CustomNavigationBarState extends State<CustomNavigationBar> {
                                     Image.asset(
                                         "assets/images/notification.png"),
                                     Padding(
-                                      padding:
-                                          EdgeInsets.only(left: 12, bottom: 15),
+                                      padding: const EdgeInsets.only(
+                                          left: 12, bottom: 15),
                                       child: Container(
                                         width: 5,
                                         height: 5,
-                                        decoration: BoxDecoration(
+                                        decoration: const BoxDecoration(
                                           shape: BoxShape.circle,
                                           color: Colors.red,
                                         ),
@@ -156,8 +155,8 @@ class _CustomNavigationBarState extends State<CustomNavigationBar> {
                                     )
                                   ],
                                 ),
-                                SizedBox(height: 16),
-                                Text(
+                                const SizedBox(height: 16),
+                                const Text(
                                   'Notification',
                                   style: TextStyle(
                                     fontSize: 10.5,
@@ -168,7 +167,7 @@ class _CustomNavigationBarState extends State<CustomNavigationBar> {
                             ),
                           ),
                         ),
-                        Container(
+                        SizedBox(
                           width: MediaQuery.of(context).size.width / 5,
                           child: TextButton(
                             onPressed: () {
@@ -177,8 +176,8 @@ class _CustomNavigationBarState extends State<CustomNavigationBar> {
                             child: Column(
                               children: [
                                 Image.asset("assets/images/profiles.png"),
-                                SizedBox(height: 16),
-                                Text(
+                                const SizedBox(height: 16),
+                                const Text(
                                   "Profile",
                                   style: TextStyle(
                                       fontSize: 10.5, color: Colors.white),
@@ -196,6 +195,6 @@ class _CustomNavigationBarState extends State<CustomNavigationBar> {
           ],
         ),
       ],
-    ));
+    );
   }
 }

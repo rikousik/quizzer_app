@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 
 class CategoryQuestionText extends StatelessWidget {
   final Color? fillColor;
@@ -18,11 +17,11 @@ class CategoryQuestionText extends StatelessWidget {
             right: 0,
             child: Container(
               width: MediaQuery.of(context).size.width,
-              padding: EdgeInsets.symmetric(vertical: 2),
+              padding: const EdgeInsets.symmetric(vertical: 2),
               decoration: BoxDecoration(
                 border: Border.all(color: Colors.white, width: 1),
                 borderRadius: const BorderRadius.all(Radius.circular(5)),
-                color: Color.fromARGB(1, 220, 228, 248),
+                color: const Color.fromARGB(1, 220, 228, 248),
                 boxShadow: const [
                   BoxShadow(
                     color: Color.fromRGBO(140, 146, 159, 0.2),

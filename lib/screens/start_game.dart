@@ -11,19 +11,6 @@ class StartGameScreen extends StatefulWidget {
 
 class _StartGameScreenState extends State<StartGameScreen> {
   @override
-  void initState() {
-    // TODO: implement initState
-    super.initState();
-    /*Future.delayed(const Duration(seconds: 3), () {
-      Navigator.pushReplacement(
-          context,
-          MaterialPageRoute(
-            builder: (context) => LoginScreen(),
-          ));
-    });*/
-  }
-
-  @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
@@ -59,7 +46,7 @@ class _StartGameScreenState extends State<StartGameScreen> {
                 Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => HomeScreen(),
+                      builder: (context) => const HomeScreen(),
                     ));
               },
             ),

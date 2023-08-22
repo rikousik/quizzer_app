@@ -10,19 +10,6 @@ class SplashScreen extends StatefulWidget {
 
 class _SplashScreenState extends State<SplashScreen> {
   @override
-  void initState() {
-    // TODO: implement initState
-    super.initState();
-    /*Future.delayed(const Duration(seconds: 3), () {
-      Navigator.pushReplacement(
-          context,
-          MaterialPageRoute(
-            builder: (context) => LoginScreen(),
-          ));
-    });*/
-  }
-
-  @override
   Widget build(BuildContext context) {
     return Scaffold(
         body: Center(
@@ -83,7 +70,7 @@ class _SplashScreenState extends State<SplashScreen> {
                     Navigator.pushReplacement(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => LoginScreen(),
+                          builder: (context) => const LoginScreen(),
                         ));
                   },
                   child: Row(
@@ -97,7 +84,7 @@ class _SplashScreenState extends State<SplashScreen> {
                           fontSize: 20,
                         ),
                       ),
-                      SizedBox(width: 12),
+                      const SizedBox(width: 12),
                       Image.asset("assets/images/arrow_right.png"),
                     ],
                   ),

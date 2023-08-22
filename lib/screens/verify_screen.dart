@@ -13,19 +13,6 @@ class VerifyScreen extends StatefulWidget {
 
 class _VerifyScreenState extends State<VerifyScreen> {
   @override
-  void initState() {
-    // TODO: implement initState
-    super.initState();
-    /*Future.delayed(const Duration(seconds: 3), () {
-      Navigator.pushReplacement(
-          context,
-          MaterialPageRoute(
-            builder: (context) => LoginScreen(),
-          ));
-    });*/
-  }
-
-  @override
   Widget build(BuildContext context) {
     const textColor = Color.fromRGBO(59, 79, 125, 1);
     return Scaffold(
@@ -39,11 +26,11 @@ class _VerifyScreenState extends State<VerifyScreen> {
                     fit: BoxFit.fill)),
             child: Column(
               children: [
-                CustomAppBar(title: 'Log In'),
+                const CustomAppBar(title: 'Log In'),
                 const SizedBox(
                   height: 41,
                 ),
-                Padding(
+                const Padding(
                   padding: EdgeInsets.only(
                       left: 32), // Adjust the padding value as needed
                   child: Align(
@@ -98,7 +85,7 @@ class _VerifyScreenState extends State<VerifyScreen> {
                             fontSize: 12,
                             color: textColor)),
                     Padding(
-                      padding: EdgeInsets.only(left: 1),
+                      padding: const EdgeInsets.only(left: 1),
                       child: Align(
                         alignment: Alignment.centerLeft,
                         child: TextButton(
@@ -108,7 +95,7 @@ class _VerifyScreenState extends State<VerifyScreen> {
                           style: TextButton.styleFrom(
                             padding: EdgeInsets.zero,
                           ),
-                          child: Text(
+                          child: const Text(
                             "Resend",
                             style: TextStyle(
                               fontFamily: 'poppins',
@@ -132,7 +119,7 @@ class _VerifyScreenState extends State<VerifyScreen> {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => StartGameScreen(),
+                          builder: (context) => const StartGameScreen(),
                         ));
                   },
                 ),

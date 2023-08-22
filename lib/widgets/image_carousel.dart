@@ -11,7 +11,7 @@ class ImageModel {
 class ImageCarousel extends StatelessWidget {
   final List<ImageModel> images;
 
-  ImageCarousel({required this.images});
+  const ImageCarousel({super.key, required this.images});
 
   @override
   Widget build(BuildContext context) {
@@ -23,9 +23,9 @@ class ImageCarousel extends StatelessWidget {
         aspectRatio: 1 / 1, // Adjust the aspect ratio of images
         viewportFraction: 0.4, // Adjust this value for two items together
         autoPlayCurve: Curves.fastOutSlowIn, // Animation curve
-        autoPlayInterval: Duration(seconds: 3), // Interval between slides
+        autoPlayInterval: const Duration(seconds: 3), // Interval between slides
         autoPlayAnimationDuration:
-            Duration(milliseconds: 800), // Animation duration
+            const Duration(milliseconds: 800), // Animation duration
         initialPage: 1,
       ),
       items: images.map((image) {
@@ -33,7 +33,7 @@ class ImageCarousel extends StatelessWidget {
           builder: (BuildContext context) {
             return Container(
               width: 122, //MediaQuery.of(context).size.width / 2 - 35,
-              margin: EdgeInsets.symmetric(horizontal: 5.0),
+              margin: const EdgeInsets.symmetric(horizontal: 5.0),
               decoration: BoxDecoration(
                 color: Colors.transparent,
                 borderRadius: BorderRadius.circular(20),
@@ -41,7 +41,7 @@ class ImageCarousel extends StatelessWidget {
               child: Stack(
                 children: [
                   ClipRRect(
-                    borderRadius: BorderRadius.only(
+                    borderRadius: const BorderRadius.only(
                       topLeft: Radius.circular(20),
                       topRight: Radius.circular(20),
                     ),
@@ -56,9 +56,9 @@ class ImageCarousel extends StatelessWidget {
                     left: 0,
                     child: Container(
                       height: 32,
-                      decoration: BoxDecoration(
+                      decoration: const BoxDecoration(
                         //color: fillColor ?? const Color.fromRGBO(81, 99, 224, 1),
-                        gradient: const LinearGradient(
+                        gradient: LinearGradient(
                           begin: Alignment.topLeft,
                           end: Alignment.bottomRight,
                           colors: [
@@ -75,7 +75,7 @@ class ImageCarousel extends StatelessWidget {
                       child: Center(
                         child: Text(
                           image.title,
-                          style: TextStyle(
+                          style: const TextStyle(
                             color: Colors.white,
                             fontFamily: "SF Pro Display",
                             fontSize: 16,

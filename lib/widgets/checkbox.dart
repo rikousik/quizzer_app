@@ -2,45 +2,51 @@ import 'package:flutter/material.dart';
 import 'package:ui_demo/styles/box.dart';
 
 class CustomCheckbox extends StatefulWidget {
-  CustomCheckbox({required this.isChecked, super.key});
+  const CustomCheckbox({this.isChecked = false, super.key});
 
-  bool isChecked = false;
+  final bool isChecked;
   @override
-  _CustomCheckboxState createState() => _CustomCheckboxState();
+  State createState() => _CustomCheckboxState();
 }
 
 class _CustomCheckboxState extends State<CustomCheckbox> {
-  //bool _isChecked = false;
+  bool _isChecked = false;
+
+  @override
+  void initState() {
+    _isChecked = widget.isChecked;
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
         setState(() {
-          widget.isChecked = !widget.isChecked;
+          _isChecked = !widget.isChecked;
         });
       },
       child: Container(
         width: 30,
         height: 30,
-        decoration: widget.isChecked
+        decoration: _isChecked
             ? BoxStyles.borderDecoration(
                 context,
                 Theme.of(context).primaryColorDark,
                 Theme.of(context).primaryColorLight,
                 Colors.white,
-                Color.fromRGBO(140, 146, 159, 1),
+                const Color.fromRGBO(140, 146, 159, 1),
                 Colors.white,
                 6)
             : BoxStyles.borderDecoration(
                 context,
-                Color.fromRGBO(214, 227, 243, 0.5),
-                Color.fromRGBO(255, 255, 255, 0.5),
-                Color.fromRGBO(214, 227, 243, 0.8),
-                Color.fromRGBO(140, 146, 159, 1),
+                const Color.fromRGBO(214, 227, 243, 0.5),
+                const Color.fromRGBO(255, 255, 255, 0.5),
+                const Color.fromRGBO(214, 227, 243, 0.8),
+                const Color.fromRGBO(140, 146, 159, 1),
                 Colors.white,
                 6),
-        child: widget.isChecked
+        child: _isChecked
             ? const Icon(
                 Icons.check,
                 color: Colors.white,

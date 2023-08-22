@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 
 class CustomDropdown extends StatefulWidget {
+  const CustomDropdown({super.key});
+
   @override
-  _CustomDropdownState createState() => _CustomDropdownState();
+  State createState() => _CustomDropdownState();
 }
 
 class _CustomDropdownState extends State<CustomDropdown> {
@@ -30,7 +32,7 @@ class _CustomDropdownState extends State<CustomDropdown> {
               },
               icon: Image.asset('assets/images/down_arrow.png'),
               isExpanded: true,
-              underline: SizedBox(), // Remove the default underline
+              underline: const SizedBox(), // Remove the default underline
               items: <String>[
                 'Option 1',
                 'Option 2',

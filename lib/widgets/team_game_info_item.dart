@@ -1,25 +1,25 @@
 import 'package:flutter/material.dart';
 
 class TeamGameInfoItem extends StatefulWidget {
-  TeamGameInfoItem({required this.teamName, required this.teamInfo, super.key});
+  const TeamGameInfoItem(
+      {required this.teamName, required this.teamInfo, super.key});
 
-  String teamName;
-  String teamInfo;
+  final String teamName;
+  final String teamInfo;
   @override
-  _TeamGameInfoItemState createState() => _TeamGameInfoItemState();
+  State createState() => _TeamGameInfoItemState();
 }
 
 class _TeamGameInfoItemState extends State<TeamGameInfoItem> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-        child: Padding(
-      padding: EdgeInsets.symmetric(vertical: 8),
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 8),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Padding(
-              padding: EdgeInsets.symmetric(vertical: 4, horizontal: 8),
+              padding: const EdgeInsets.symmetric(vertical: 4, horizontal: 8),
               child: Text(
                 widget.teamName,
                 style: const TextStyle(
@@ -50,6 +50,6 @@ class _TeamGameInfoItemState extends State<TeamGameInfoItem> {
           )
         ],
       ),
-    ));
+    );
   }
 }

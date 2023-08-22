@@ -10,15 +10,15 @@ class User {
 class UserItem extends StatefulWidget {
   final User user;
 
-  UserItem({required this.user});
+  const UserItem({super.key, required this.user});
 
   @override
-  _UserItemState createState() => _UserItemState();
+  State<UserItem> createState() => _UserItemState();
 }
 
 class _UserItemState extends State<UserItem> {
   bool isEditing = false;
-  TextEditingController _usernameController = TextEditingController();
+  final TextEditingController _usernameController = TextEditingController();
 
   @override
   void initState() {
@@ -37,7 +37,8 @@ class _UserItemState extends State<UserItem> {
     return Container(
       decoration: const BoxDecoration(
         border: Border(
-          bottom: BorderSide(width: 1.0, color: Colors.white), // Add white border
+          bottom:
+              BorderSide(width: 1.0, color: Colors.white), // Add white border
         ),
       ),
       child: ListTile(
@@ -51,7 +52,7 @@ class _UserItemState extends State<UserItem> {
             : Text(widget.user.username),
         trailing: isEditing
             ? IconButton(
-                icon: Icon(Icons.save),
+                icon: const Icon(Icons.save),
                 onPressed: () {
                   setState(() {
                     isEditing = false;

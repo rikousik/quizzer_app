@@ -17,7 +17,7 @@ class HomeInviteFriend extends StatelessWidget {
               Color.fromRGBO(136, 147, 240, 1), // Right color
             ],
           ),
-          image: DecorationImage(
+          image: const DecorationImage(
               image: AssetImage("assets/images/Vector3.png"),
               alignment: Alignment.bottomCenter,
               fit: BoxFit.fitWidth),
@@ -33,11 +33,11 @@ class HomeInviteFriend extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 //mainAxisSize: MainAxisSize.max,
                 children: [
-                  Container(
+                  SizedBox(
                     width: MediaQuery.of(context).size.width - 160,
-                    child: Text(
+                    child: const Text(
                       'Play quiz together with your friends now !',
-                      style: const TextStyle(
+                      style: TextStyle(
                         color: Colors.white,
                         fontFamily: "SF Pro Display",
                         fontSize: 19,

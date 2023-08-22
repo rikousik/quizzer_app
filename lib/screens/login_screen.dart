@@ -3,7 +3,6 @@ import 'package:ui_demo/screens/signup_screen.dart';
 import 'package:ui_demo/widgets/submit_button.dart';
 import 'package:ui_demo/widgets/text_input_widget.dart';
 import 'package:ui_demo/screens/verify_screen.dart';
-import 'package:ui_demo/screens/category_screen.dart';
 import 'package:ui_demo/widgets/custom_appbar.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -30,7 +29,7 @@ class _LoginScreenState extends State<LoginScreen> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                CustomAppBar(title: 'Log In'),
+                const CustomAppBar(title: 'Log In'),
 
                 const SizedBox(height: 40),
                 const Text(
@@ -59,14 +58,14 @@ class _LoginScreenState extends State<LoginScreen> {
                 const SizedBox(
                   height: 25,
                 ),
-                TextInputWidget(
+                const TextInputWidget(
                   hintText: "Name",
                   icon: "assets/images/profile.png",
                 ),
                 const SizedBox(
                   height: 10,
                 ),
-                TextInputWidget(
+                const TextInputWidget(
                   hintText: "Mobile Number",
                   icon: "assets/images/lock.png",
                 ),
@@ -91,7 +90,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => VerifyScreen(),
+                          builder: (context) => const VerifyScreen(),
                         ));
                   },
                 ),
@@ -113,7 +112,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => SignupScreen(),
+                              builder: (context) => const SignupScreen(),
                             ));
                       },
                       child: const Text(

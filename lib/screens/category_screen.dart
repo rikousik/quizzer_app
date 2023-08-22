@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:ui_demo/screens/verify_screen.dart';
 import 'package:ui_demo/widgets/custom_appbar.dart';
 import 'package:ui_demo/widgets/category_question_text.dart';
 import 'package:ui_demo/widgets/category_checkbox_card.dart';
@@ -31,12 +30,12 @@ class _CategoryScreenState extends State<CategoryScreen> {
                   image: AssetImage("assets/images/bg.png"), fit: BoxFit.fill)),
           child: Column(
             children: [
-              CustomAppBar(title: 'Category1'),
+              const CustomAppBar(title: 'Category1'),
               Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 29.0),
+                  padding: const EdgeInsets.symmetric(horizontal: 29.0),
                   child: Container(
-                      margin: EdgeInsets.only(top: 38),
-                      child: Column(
+                      margin: const EdgeInsets.only(top: 38),
+                      child: const Column(
                         children: [
                           CategoryQuestionText(),
                           SizedBox(height: 59),

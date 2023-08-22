@@ -9,11 +9,11 @@ class VerifySmsInput extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.symmetric(vertical: 2),
+      padding: const EdgeInsets.symmetric(vertical: 2),
       decoration: BoxDecoration(
         border: Border.all(color: Colors.white, width: 1),
         borderRadius: const BorderRadius.all(Radius.circular(25)),
-        color: Color.fromARGB(1, 220, 228, 248),
+        color: const Color.fromARGB(1, 220, 228, 248),
         boxShadow: const [
           BoxShadow(
             color: Color.fromRGBO(140, 146, 159, 0.2),
@@ -35,8 +35,8 @@ class VerifySmsInput extends StatelessWidget {
               FilteringTextInputFormatter.digitsOnly,
               LengthLimitingTextInputFormatter(1),
             ],
-            decoration: InputDecoration(border: InputBorder.none),
-            style: TextStyle(fontSize: 14),
+            decoration: const InputDecoration(border: InputBorder.none),
+            style: const TextStyle(fontSize: 14),
           )),
     );
   }

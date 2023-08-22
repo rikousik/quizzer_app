@@ -28,7 +28,8 @@ class SubmitButton extends StatelessWidget {
                 color: fillColor ?? const Color.fromRGBO(81, 99, 224, 1),
                 borderRadius: BorderRadius.circular(10),
                 border: Border.all(
-                    color: Color.fromRGBO(214, 227, 243, 0.3), width: 1.5),
+                    color: const Color.fromRGBO(214, 227, 243, 0.3),
+                    width: 1.5),
                 boxShadow: const [
                   BoxShadow(
                     color: Color.fromRGBO(140, 146, 159, 1),

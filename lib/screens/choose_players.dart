@@ -7,7 +7,7 @@ import '../widgets/submit_button.dart';
 import '../widgets/useritem_widget.dart';
 
 class ChoosePlayers extends StatefulWidget {
-  ChoosePlayers({super.key});
+  const ChoosePlayers({super.key});
 
   @override
   State<ChoosePlayers> createState() => _ChoosePlayersState();
@@ -58,7 +58,7 @@ class _ChoosePlayersState extends State<ChoosePlayers> {
                     fit: BoxFit.fill)),
             child: Column(
               children: [
-                CustomAppBar(title: 'Choose Players'),
+                const CustomAppBar(title: 'Choose Players'),
                 Container(
                   decoration: const BoxDecoration(
                     border: Border(
@@ -78,7 +78,7 @@ class _ChoosePlayersState extends State<ChoosePlayers> {
                       const SizedBox(
                         height: 30,
                       ),
-                      Container(
+                      SizedBox(
                         // Use Expanded for the list of user items
                         height: MediaQuery.of(context).size.height / 1.7,
                         child: ListView.builder(
@@ -97,7 +97,7 @@ class _ChoosePlayersState extends State<ChoosePlayers> {
                             Navigator.push(
                               context,
                               MaterialPageRoute(
-                                builder: (context) => StoryWindow(),
+                                builder: (context) => const StoryWindow(),
                               ),
                             );
                           },

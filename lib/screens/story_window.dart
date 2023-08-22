@@ -2,21 +2,19 @@ import 'package:flutter/material.dart';
 
 import '../widgets/custom_appbar.dart';
 import '../widgets/round_textarea.dart';
-import '../widgets/search_bar_widget.dart';
 import '../widgets/submit_button.dart';
-import '../widgets/useritem_widget.dart';
 
 class StoryWindow extends StatefulWidget {
-  StoryWindow({super.key});
+  const StoryWindow({super.key});
 
   @override
   State<StoryWindow> createState() => _StoryWindowState();
 }
 
 class _StoryWindowState extends State<StoryWindow> {
-  final String Story =
+  final String story =
       "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout It is a long fact that a reader will be distracted by the readable of a page when looking at its layout It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout It is a long fact that a reader will be distracted by the readable of a page when looking at its layout?";
-  final String Question =
+  final String question =
       "Rreader will be distracted by the readable of a page when looking at its layout?";
 
   @override
@@ -37,7 +35,7 @@ class _StoryWindowState extends State<StoryWindow> {
                     fit: BoxFit.fill)),
             child: Column(
               children: [
-                CustomAppBar(title: 'Story Window'),
+                const CustomAppBar(title: 'Story Window'),
                 Container(
                   decoration: const BoxDecoration(
                     border: Border(
@@ -52,27 +50,27 @@ class _StoryWindowState extends State<StoryWindow> {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Container(
+                      SizedBox(
                           // Use Expanded for the list of user items
                           height: MediaQuery.of(context).size.height / 1.7,
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Text(
+                              const Text(
                                 "Story :",
                                 style: TextStyle(
                                     fontSize: 14.0, color: Color(0xFF3B4F7D)),
                               ),
                               RoundTextArea(
-                                text: Story,
+                                text: story,
                               ),
-                              Text(
+                              const Text(
                                 "Question :",
                                 style: TextStyle(
                                     fontSize: 14.0, color: Color(0xFF3B4F7D)),
                               ),
                               RoundTextArea(
-                                text: Question,
+                                text: question,
                               )
                             ],
                           )),
@@ -85,7 +83,7 @@ class _StoryWindowState extends State<StoryWindow> {
                             Navigator.push(
                               context,
                               MaterialPageRoute(
-                                builder: (context) => StoryWindow(),
+                                builder: (context) => const StoryWindow(),
                               ),
                             );
                           },

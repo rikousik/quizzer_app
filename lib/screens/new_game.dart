@@ -15,19 +15,6 @@ class NewGameScreen extends StatefulWidget {
 
 class _NewGameScreenState extends State<NewGameScreen> {
   @override
-  void initState() {
-    // TODO: implement initState
-    super.initState();
-    /*Future.delayed(const Duration(seconds: 3), () {
-      Navigator.pushReplacement(
-          context,
-          MaterialPageRoute(
-            builder: (context) => LoginScreen(),
-          ));
-    });*/
-  }
-
-  @override
   Widget build(BuildContext context) {
     return MaterialApp(
         home: Scaffold(
@@ -41,7 +28,7 @@ class _NewGameScreenState extends State<NewGameScreen> {
             mainAxisSize: MainAxisSize.max,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              CustomAppBar(title: 'New Game'),
+              const CustomAppBar(title: 'New Game'),
               Container(
                 decoration: const BoxDecoration(
                   border: Border(
@@ -58,27 +45,28 @@ class _NewGameScreenState extends State<NewGameScreen> {
                           child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                TextInputWidget(
+                                const TextInputWidget(
                                     hintText: "Please Enter Game Title"),
                                 const SizedBox(height: 20),
-                                CustomDropdown(),
+                                const CustomDropdown(),
                                 const SizedBox(height: 20),
-                                Row(
+                                const Row(
                                   children: [
                                     CustomCheckbox(
                                       isChecked: true,
                                     ),
-                                    const SizedBox(width: 20),
-                                    const Text("Are you 18 or above")
+                                    SizedBox(width: 20),
+                                    Text("Are you 18 or above")
                                   ],
                                 ),
                                 const SizedBox(height: 20),
-                                TextInputWidget(hintText: "Enter Player Name"),
+                                const TextInputWidget(
+                                    hintText: "Enter Player Name"),
                                 const SizedBox(height: 20),
-                                TeamGameInfo(
+                                const TeamGameInfo(
                                     hintText: 'asdf'), // For Custom ListView
                                 const SizedBox(height: 20),
-                                TeamGameInfo(hintText: 'asdf'),
+                                const TeamGameInfo(hintText: 'asdf'),
                                 const SizedBox(height: 60),
                                 SubmitButton(
                                   title: 'Next',

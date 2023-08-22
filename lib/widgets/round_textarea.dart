@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class RoundTextArea extends StatelessWidget {
   final String text;
 
-  RoundTextArea({required this.text});
+  const RoundTextArea({super.key, required this.text});
 
   @override
   Widget build(BuildContext context) {
@@ -12,7 +12,7 @@ class RoundTextArea extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 35),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(15.0),
-        gradient: LinearGradient(
+        gradient: const LinearGradient(
           colors: [Color(0xFFE7EEFF), Color(0xFFE0EAFF)],
           begin: Alignment.centerRight,
           end: Alignment.centerLeft,
@@ -33,7 +33,7 @@ class RoundTextArea extends StatelessWidget {
       ),
       child: Text(
         text,
-        style: TextStyle(fontSize: 14.0, color: Color(0xFF3B4F7D)),
+        style: const TextStyle(fontSize: 14.0, color: Color(0xFF3B4F7D)),
       ),
     );
   }

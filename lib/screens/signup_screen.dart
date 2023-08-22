@@ -28,7 +28,7 @@ class _SignupScreenState extends State<SignupScreen> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                CustomAppBar(title: 'Sign UP'),
+                const CustomAppBar(title: 'Sign UP'),
                 const SizedBox(
                   height: 41,
                 ),
@@ -59,28 +59,28 @@ class _SignupScreenState extends State<SignupScreen> {
                 const SizedBox(
                   height: 25,
                 ),
-                TextInputWidget(
+                const TextInputWidget(
                   hintText: "Name",
                   icon: "assets/images/profile.png",
                 ),
                 const SizedBox(
                   height: 10,
                 ),
-                TextInputWidget(
+                const TextInputWidget(
                   hintText: "Last Name",
                   icon: "assets/images/profile.png",
                 ),
                 const SizedBox(
                   height: 10,
                 ),
-                TextInputWidget(
+                const TextInputWidget(
                   hintText: "Age",
                   icon: "assets/images/profile.png",
                 ),
                 const SizedBox(
                   height: 10,
                 ),
-                TextInputWidget(
+                const TextInputWidget(
                   hintText: "Mobile Number",
                   icon: "assets/images/lock.png",
                 ),
@@ -93,7 +93,7 @@ class _SignupScreenState extends State<SignupScreen> {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => VerifyScreen(),
+                          builder: (context) => const VerifyScreen(),
                         ));
                   },
                 ),

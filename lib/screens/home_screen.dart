@@ -32,12 +32,12 @@ class _HomeScreenState extends State<HomeScreen> {
               image: DecorationImage(
                   image: AssetImage("assets/images/bg.png"), fit: BoxFit.fill)),
           child: Column(children: [
-            CustomAppBar(title: 'Home'),
+            const CustomAppBar(title: 'Home'),
             Container(
               height: 1,
               color: Colors.white, // You can customize the color of the line
             ),
-            Container(
+            SizedBox(
               height: MediaQuery.of(context).size.height - kToolbarHeight - 41,
               width: MediaQuery.of(context).size.width,
               child: Column(
@@ -107,20 +107,20 @@ class _HomeScreenState extends State<HomeScreen> {
                             reverse:
                                 false, // Set to true if you want the items to be displayed in reverse order
                             autoPlay: false, // Set to true for auto-play
-                            autoPlayInterval: Duration(
+                            autoPlayInterval: const Duration(
                                 seconds: 3), // Adjust the auto-play interval
-                            autoPlayAnimationDuration: Duration(
+                            autoPlayAnimationDuration: const Duration(
                                 milliseconds:
                                     800), // Adjust the animation duration
                             autoPlayCurve: Curves
                                 .fastOutSlowIn, // Adjust the animation curve
                           ),
                           items: [
-                            UnfinishedGameItem(
+                            const UnfinishedGameItem(
                               title: "Game 1",
                               gameItems: ["Alltag/Haushalt", "Scherz"],
                             ),
-                            UnfinishedGameItem(
+                            const UnfinishedGameItem(
                               title: "Game 2",
                               gameItems: ["Alltag/Haushalt", "Scherz"],
                             ),
@@ -130,7 +130,8 @@ class _HomeScreenState extends State<HomeScreen> {
                               builder: (BuildContext context) {
                                 return Container(
                                   width: MediaQuery.of(context).size.width,
-                                  margin: EdgeInsets.symmetric(horizontal: 5.0),
+                                  margin: const EdgeInsets.symmetric(
+                                      horizontal: 5.0),
                                   child: item,
                                 );
                               },
@@ -207,7 +208,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           ],
                         ),
                       ])),
-                  CustomNavigationBar()
+                  const CustomNavigationBar()
                 ],
               ),
             ),

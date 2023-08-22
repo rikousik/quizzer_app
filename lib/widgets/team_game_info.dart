@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:ui_demo/widgets/team_game_info_item.dart';
 
 class TeamGameInfo extends StatefulWidget {
-  TeamGameInfo({required this.hintText, this.icon, super.key});
+  const TeamGameInfo({required this.hintText, this.icon, super.key});
 
-  String hintText;
-  String? icon;
+  final String hintText;
+  final String? icon;
 
   @override
   State<TeamGameInfo> createState() => _TeamGameInfoState();
@@ -34,9 +34,9 @@ class _TeamGameInfoState extends State<TeamGameInfo> {
         ],
       ),
       child: ListView(
-        padding: EdgeInsets.symmetric(vertical: 0),
+        padding: const EdgeInsets.symmetric(vertical: 0),
         shrinkWrap: true,
-        children: [
+        children: const [
           TeamGameInfoItem(
             teamName: "Team1",
             teamInfo: "Champ1, Champ2, Champ3",
